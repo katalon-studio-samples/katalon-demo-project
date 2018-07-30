@@ -17,6 +17,8 @@ public class GlobalVariable {
     static {
         def allVariables = [:]        
         allVariables.put('default', [:])
+        allVariables.put('android', allVariables['default'] + [:])
+        allVariables.put('desktop', allVariables['default'] + [:])
         
         String profileName = RunConfiguration.getExecutionProfile()
         
