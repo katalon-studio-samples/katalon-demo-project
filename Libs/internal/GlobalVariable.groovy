@@ -13,16 +13,23 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
  */
 public class GlobalVariable {
      
+    /**
+     * <p></p>
+     */
+    public static Object app_url
+     
 
     static {
         def allVariables = [:]        
-        allVariables.put('default', [:])
+        allVariables.put('default', ['app_url' : '/Users/trongbui/katalon/sources/katalon-studio-samples/katalon-demo-project/Apps/android/Simple Job Scheduler_v2.2_apkpure.com.apk'])
         allVariables.put('android', allVariables['default'] + [:])
         allVariables.put('desktop', allVariables['default'] + [:])
+        allVariables.put('kobiton', allVariables['default'] + ['app_url' : 'kobiton-store:13150'])
         
         String profileName = RunConfiguration.getExecutionProfile()
         
         def selectedVariables = allVariables[profileName]
+        app_url = selectedVariables['app_url']
         
     }
 }

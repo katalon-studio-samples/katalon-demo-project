@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
    <description></description>
-   <name>katalon-demo</name>
+   <name>Katalon Demo Project</name>
    <tag></tag>
    <UUID>1654688c-29ea-4e67-9b93-f1a9deed98d4</UUID>
    <migratedVersion>5.4.0</migratedVersion>

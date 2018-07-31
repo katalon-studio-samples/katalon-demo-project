@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>New Test Case</name>
+   <name>Add a new job to Job Scheduler - custom steps</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>a6bfafe9-2a28-4d27-8151-a059ae3cf5d7</testCaseGuid>
+   <testCaseGuid>bb821325-9b84-4f76-8f19-b42aea061b3f</testCaseGuid>
 </TestCaseEntity>

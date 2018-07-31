@@ -4,7 +4,6 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.checkpoint.CheckpointFactory as CheckpointFactory
-import com.kms.katalon.core.configuration.RunConfiguration
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as MobileBuiltInKeywords
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
@@ -20,7 +19,35 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+Mobile.startApplication(GlobalVariable.app_url,true)
 
-println RunConfiguration.getExecutionProfile()
-println RunConfiguration.getOS()
-println RunConfiguration.getExecutionProperties()
+Mobile.verifyElementText(findTestObject('Job Scheduler/android.widget.TextView0 - Job Scheduler'), 'Job Scheduler')
+
+MobileBuiltInKeywords.verifyElementText(findTestObject('Job Scheduler/android.widget.TextView1 - No jobs added'), 'No jobs added!')
+
+Mobile.tap(findTestObject('Job Scheduler/android.widget.ImageButton1'), 0)
+
+MobileBuiltInKeywords.verifyElementText(findTestObject('Job Scheduler/android.widget.TextView0 - Add job'), 'Add job')
+
+Mobile.verifyElementVisible(findTestObject('Job Scheduler/android.widget.Button0 - NEXT'), 0)
+
+Mobile.tap(findTestObject('Job Scheduler/android.widget.TextView1 - Date'), 0)
+
+Mobile.tap(findTestObject('Job Scheduler/android.widget.Button1 - OK'), 0)
+
+Mobile.tap(findTestObject('Job Scheduler/android.widget.Button0 - NEXT'), 0)
+
+Mobile.tap(findTestObject('Job Scheduler/android.widget.Button0 - NEXT'), 0)
+
+MobileBuiltInKeywords.verifyElementVisible(findTestObject('Job Scheduler/android.widget.Button0 - CLOSE'), 0)
+
+Mobile.tap(findTestObject('Job Scheduler/android.widget.Button0 - CLOSE'), 0)
+
+MobileBuiltInKeywords.verifyElementVisible(findTestObject('Job Scheduler/android.widget.TextView0 - Add job'), 0)
+
+Mobile.tap(findTestObject('Job Scheduler/android.widget.Button0 - ADD JOB'), 0)
+
+Mobile.verifyElementText(findTestObject('Job Scheduler/android.widget.TextView1 - Created Date'), new Date().format("EEEE"))
+
+Mobile.closeApplication()
+

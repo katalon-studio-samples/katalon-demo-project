@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>%Users%trongbui%katalon%sources%katalon-studio-samples%katalon-demo-project%katalon-demo.prj</name>
+	<name>%Users%trongbui%katalon%sources%katalon-studio-samples%katalon-demo-project%Katalon Demo Project.prj</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -17,7 +17,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1532766049173</id>
+			<id>0</id>
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -26,7 +26,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1532766049176</id>
+			<id>0</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -35,7 +35,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1532852217498</id>
+			<id>0</id>
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -44,7 +44,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1532852217526</id>
+			<id>0</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
