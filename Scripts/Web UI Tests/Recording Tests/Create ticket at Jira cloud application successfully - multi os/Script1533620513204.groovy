@@ -1,7 +1,5 @@
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-
-import org.openqa.selenium.Keys
-
+import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
@@ -56,11 +54,12 @@ if (profile == 'desktop') {
     WebUI.click(findTestObject('mobile/el_menu'))
 
     WebUI.waitForElementClickable(findTestObject('mobile/el_switch_desktop_version'), 0)
-	
-	WebUI.click(findTestObject('mobile/el_switch_desktop_version'))
+
+    WebUI.click(findTestObject('mobile/el_switch_desktop_version'))
 }
 
 WebUI.waitForElementClickable(findTestObject('Page_System dashboard - Jira/elCreate'), 0)
+
 WebUI.click(findTestObject('Page_System dashboard - Jira/elCreate'))
 
 WebUI.setText(findTestObject('Object Repository/Page_Create issue - Jira/input_summary'), 'Setup demo project for Katalon-Kobiton webinar')
@@ -74,4 +73,6 @@ WebUI.click(findTestObject('Object Repository/Page_Create issue - Jira/input_Edi
 WebUI.click(findTestObject('Page_System dashboard - Jira/a_KD-3174 - Setup demo project'))
 
 WebUI.verifyElementText(findTestObject('Page_KD-3174 Setup demo project for/h1_Setup demo project for Kata'), 'Setup demo project for Katalon-Kobiton webinar')
+
+return WebUI.getText(findTestObject('Page_Create issue - Jira/el_key_val'))
 
