@@ -43,7 +43,7 @@ WebUI.click(findTestObject('Page_Sign in to your account/input_idSIButton9'))
 
 WebUI.waitForElementPresent(findTestObject('Page_Sign in to your account/div_demokatalon.com'), 0)
 
-WebUiBuiltInKeywords.verifyElementText(findTestObject('Page_Sign in to your account/div_demokatalon.com'), 'demo@katalon.com')
+WebUI.verifyElementText(findTestObject('Page_Sign in to your account/div_demokatalon.com'), 'demo@katalon.com')
 
 WebUI.setEncryptedText(findTestObject('Page_Sign in to your account/input_passwd'), '3q63o6Jj3SJkOvMHtql0qi2TenXgkra+')
 
@@ -55,5 +55,5 @@ WebUI.click(findTestObject('Page_Sign in to your account/input_idSIButton9'))
 
 WebUI.waitForElementPresent(findTestObject('Page_System dashboard - Jira/h1_System dashboard'), 0)
 
-WebUiBuiltInKeywords.verifyElementText(findTestObject('Page_System dashboard - Jira/h1_System dashboard'), 'System dashboard')
+WebUI.verifyElementText(findTestObject('Page_System dashboard - Jira/h1_System dashboard'), 'System dashboard')
 
