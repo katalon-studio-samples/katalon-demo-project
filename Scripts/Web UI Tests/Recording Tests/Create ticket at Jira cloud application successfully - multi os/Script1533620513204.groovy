@@ -68,6 +68,10 @@ WebUI.setText(findTestObject('Object Repository/Page_Create issue - Jira/textare
 
 WebUI.sendKeys(findTestObject('Object Repository/Page_Create issue - Jira/textarea_description'), Keys.chord(Keys.TAB))
 
+WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Create issue - Jira/input_Edit'), 0)
+
+WebUI.mouseOver(findTestObject('Object Repository/Page_Create issue - Jira/input_Edit'))
+
 WebUI.click(findTestObject('Object Repository/Page_Create issue - Jira/input_Edit'))
 
 WebUI.click(findTestObject('Page_System dashboard - Jira/a_KD-3174 - Setup demo project'))

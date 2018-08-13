@@ -25,6 +25,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;root&quot;)/div[1]/div[@class=&quot;zJwEi&quot;]/div[@class=&quot;eaYrSC&quot;]/div[@class=&quot;iMoAjM&quot;]/div[@class=&quot;vHoXo&quot;]/header[@class=&quot;dMTsYF&quot;]/h1[1]</value>
+      <value>id(&quot;root&quot;)/div[1]/div[@class=&quot;sc-bwzfXH cJYcBP&quot;]/div[@class=&quot;sc-htpNat iNnOlb&quot;]/div[@class=&quot;sc-bZQynM bskBNX&quot;]/div[@class=&quot;sc-dnqmqq jHKQYK&quot;]/header[@class=&quot;sc-iwsKbI fJjmBt&quot;]/h1[1]</value>
    </webElementProperties>
 </WebElementEntity>
