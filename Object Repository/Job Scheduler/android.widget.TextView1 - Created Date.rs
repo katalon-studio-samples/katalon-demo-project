@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@class = 'android.widget.TextView' and @instance = '1' and (text() = 'Tuesday' or . = 'Tuesday') and @resource-id = 'geert.berkers.localwerkplanner:id/dayOfWeek']</value>
+         <value>//*[@class = 'android.widget.TextView' and @resource-id = 'geert.berkers.localwerkplanner:id/dayOfWeek']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -20,7 +20,7 @@
       <value>android.widget.TextView</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>instance</name>
       <type>Main</type>

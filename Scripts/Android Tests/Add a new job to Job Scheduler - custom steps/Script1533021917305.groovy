@@ -1,22 +1,12 @@
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
-import com.kms.katalon.core.checkpoint.CheckpointFactory as CheckpointFactory
+
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+
+import com.kms.katalon.core.configuration.RunConfiguration
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as MobileBuiltInKeywords
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
-import com.kms.katalon.core.model.FailureHandling as FailureHandling
-import com.kms.katalon.core.testcase.TestCase as TestCase
-import com.kms.katalon.core.testcase.TestCaseFactory as TestCaseFactory
-import com.kms.katalon.core.testdata.TestData as TestData
-import com.kms.katalon.core.testdata.TestDataFactory as TestDataFactory
-import com.kms.katalon.core.testobject.ObjectRepository as ObjectRepository
-import com.kms.katalon.core.testobject.TestObject as TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WSBuiltInKeywords
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
-import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
-import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+
 import internal.GlobalVariable as GlobalVariable
 
 Mobile.startApplication(GlobalVariable.app_url,true)
@@ -47,7 +37,16 @@ MobileBuiltInKeywords.verifyElementVisible(findTestObject('Job Scheduler/android
 
 Mobile.tap(findTestObject('Job Scheduler/android.widget.Button0 - ADD JOB'), 0)
 
-Mobile.verifyElementText(findTestObject('Job Scheduler/android.widget.TextView1 - Created Date'), new Date().format("EEEE"))
+Date date = new Date()
+DateFormat df = new SimpleDateFormat("EEEE");
+
+def profile = RunConfiguration.getExecutionProfile()
+
+if (profile == 'kobiton') {
+	df.setTimeZone(TimeZone.getTimeZone(GlobalVariable.time_zone));
+}
+
+Mobile.verifyElementText(findTestObject('Job Scheduler/android.widget.TextView1 - Created Date'), df.format(date))
 
 Mobile.closeApplication()
 

@@ -18,18 +18,24 @@ public class GlobalVariable {
      */
     public static Object app_url
      
+    /**
+     * <p></p>
+     */
+    public static Object time_zone
+     
 
     static {
         def allVariables = [:]        
         allVariables.put('default', ['app_url' : '/Users/trongbui/katalon/sources/katalon-studio-samples/katalon-demo-project/Apps/android/Simple Job Scheduler_v2.2_apkpure.com.apk'])
         allVariables.put('android', allVariables['default'] + [:])
         allVariables.put('desktop', allVariables['default'] + [:])
-        allVariables.put('kobiton', allVariables['default'] + ['app_url' : 'kobiton-store:13150'])
+        allVariables.put('kobiton', allVariables['default'] + ['app_url' : 'kobiton-store:13150', 'time_zone' : 'US/Eastern'])
         
         String profileName = RunConfiguration.getExecutionProfile()
         
         def selectedVariables = allVariables[profileName]
         app_url = selectedVariables['app_url']
+        time_zone = selectedVariables['time_zone']
         
     }
 }

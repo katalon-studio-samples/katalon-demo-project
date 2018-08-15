@@ -9,4 +9,9 @@
       <initValue>'kobiton-store:13150'</initValue>
       <name>app_url</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'US/Eastern'</initValue>
+      <name>time_zone</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
