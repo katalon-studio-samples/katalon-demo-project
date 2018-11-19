@@ -24,14 +24,14 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://id.atlassian.com/login?continue=https%3A%2F%2Fkatalon.atlassian.net%2Flogin%3FredirectCount%3D1')
 
-WebUI.verifyElementText(findTestObject('Page_Log in to continue - Log in wi/h1_Log in to your account'), 'Log in to your account')
+WebUI.verifyElementText(findTestObject('Web UI Tests/Recording Tests/Page_Log in to continue - Log in wi/h1_Log in to your account'), 'Log in to your account')
 
-WebUI.verifyElementAttributeValue(findTestObject('Page_Log in to continue - Log in wi/input_username'), 'placeholder', 'Enter email', 
+WebUI.verifyElementAttributeValue(findTestObject('Web UI Tests/Recording Tests/Page_Log in to continue - Log in wi/input_username'), 'placeholder', 'Enter email', 
     0)
 
-WebUI.setText(findTestObject('Page_Log in to continue - Log in wi/input_username'), 'demo@katalon.com')
+WebUI.setText(findTestObject('Web UI Tests/Recording Tests/Page_Log in to continue - Log in wi/input_username'), 'demo@katalon.com')
 
-WebUI.click(findTestObject('Page_Log in to continue - Log in wi/span_Continue'))
+WebUI.click(findTestObject('Web UI Tests/Recording Tests/Page_Log in to continue - Log in wi/span_Continue'))
 
 WebUI.verifyElementText(findTestObject('Page_Sign in to your account/div_Sign in'), 'Sign in')
 
@@ -57,8 +57,8 @@ WebUI.click(findTestObject('Page_Sign in to your account/input_idSIButton9'))
 def profile = RunConfiguration.getExecutionProfile();
 
 if (profile == 'desktop') {
-	WebUI.waitForElementPresent(findTestObject('Page_System dashboard - Jira/h1_System dashboard'), 0)
+	WebUI.waitForElementPresent(findTestObject('Web UI Tests/Recording Tests/Page_System dashboard - Jira/h1_System dashboard'), 0)
 	
-	WebUI.verifyElementText(findTestObject('Page_System dashboard - Jira/h1_System dashboard'), 'System dashboard')
+	WebUI.verifyElementText(findTestObject('Web UI Tests/Recording Tests/Page_System dashboard - Jira/h1_System dashboard'), 'System dashboard')
 }
 

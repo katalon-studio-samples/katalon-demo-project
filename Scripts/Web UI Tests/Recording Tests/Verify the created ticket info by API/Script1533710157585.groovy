@@ -22,7 +22,7 @@ import internal.GlobalVariable as GlobalVariable
 def issue_key = WebUI.callTestCase(findTestCase('Web UI Tests/Recording Tests/Create ticket at Jira cloud application successfully - multi os'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
-def response = WS.sendRequest(findTestObject('API/Search issues by jql with hard coding test data', [('issue_key') : issue_key]))
+def response = WS.sendRequest(findTestObject('Web API Tests/Search issues by jql with hard coding test data', [('issue_key') : issue_key]))
 
 def ui_summary = WebUI.getText(findTestObject('Page_Create issue - Jira/el_summary_val'))
 

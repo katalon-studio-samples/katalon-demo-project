@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Calling mysql procedure</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>cd183eec-0889-40a6-a076-ed891be8d685</testCaseGuid>
+</TestCaseEntity>

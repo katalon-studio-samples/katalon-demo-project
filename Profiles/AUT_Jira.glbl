@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>AUT_Jira</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description>URL of the Application Under Test (AUT)</description>
+      <initValue>'https://katalon.atlassian.net'</initValue>
+      <name>URL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>A valid account used during the test</description>
+      <initValue>'sPiHQ&amp;YEa6ST`de+'</initValue>
+      <name>password</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>The password that has been encrypted used during the test</description>
+      <initValue>'KLAk0b2rAgvA1EV7zgpKiS/uV+5nc48Y'</initValue>
+      <name>encrypted_password</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>A valid account used during the test</description>
+      <initValue>'demo@katalon.com'</initValue>
+      <name>username</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>60</initValue>
+      <name>element_timeout</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

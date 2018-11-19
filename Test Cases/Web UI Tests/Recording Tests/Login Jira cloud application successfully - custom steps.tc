@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Login Jira cloud application successfully - custom steps</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>a8b93fd3-1d5d-425a-b400-44a0a87d686e</testCaseGuid>
-</TestCaseEntity>

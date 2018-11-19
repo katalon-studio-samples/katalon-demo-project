@@ -4,4 +4,9 @@
    <name>android</name>
    <tag></tag>
    <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'/Users/trongbui/katalon/sources/katalon-studio-samples/katalon-demo-project/Apps/android/Now E Movies Dramas Sports_v1.0.7_apkpure.com.apk'</initValue>
+      <name>now_e_movies_url</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
