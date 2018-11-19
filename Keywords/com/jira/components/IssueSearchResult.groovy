@@ -22,34 +22,34 @@ public class IssueSearchResult {
 
 	def List<String> getHeaders() {
 		def headers = new ArrayList();
-		
-		def elHeaders = elTable.findElements(By.xpath("//thead/tr[@class='rowHeader']//th"));
-		headers = elHeaders.collect{it.getText()} 
+
+		def elHeaders = elTable.findElements(By.xpath(".//thead/tr[@class='rowHeader']//th"));
+		headers = elHeaders.collect{it.getText()}
 	}
-	
+
 	def List<Map> getIssues() {
 		def elIssues = [[:]]
-		def elRows = elTable.findElements(By.xpath("//tbody/tr[contains(@class, 'issuerow')]"));
+		def elRows = elTable.findElements(By.xpath(".//tbody/tr[contains(@class, 'issuerow')]"));
 		elRows.each {
 			def issueInfo = [:]
-			def elAttrbs = it.findElements(By.xpath("//td"))
+			def elAttrbs = it.findElements(By.xpath(".//td"))
 			elAttrbs.each {
 				def cls = it.getAttribute('class');
 				switch (cls) {
 					case 'issuetype':
-						issueInfo.put('Type', it.findElement(By.xpath("//img")).getAttribute('alt'))
+						issueInfo.put('Type', it.findElement(By.xpath(".//img")).getAttribute('alt'))
 						break
 					case 'issuekey':
 						issueInfo.put('Key', it.getText())
 						break
 					case 'summary':
-					 	issueInfo.put('Summary', it.getText())
+						issueInfo.put('Summary', it.getText())
 						break
 					case 'reporter':
 						issueInfo.put('Reporter', it.getText())
 						break
 					case 'priority':
-						issueInfo.put('Priority', it.findElement(By.xpath("//img")).getAttribute('alt'))
+						issueInfo.put('Priority', it.findElement(By.xpath(".//img")).getAttribute('alt'))
 						break
 					case 'created':
 						issueInfo.put('Created', it.getText())
@@ -66,12 +66,12 @@ public class IssueSearchResult {
 						break
 				}
 			}
-			
+
 			elIssues.add(issueInfo)
 		}
 		elIssues
 	}
-	
+
 	@Keyword
 	def List<Map> getIssues(TestObject table) {
 		def result = new IssueSearchResult(table)
