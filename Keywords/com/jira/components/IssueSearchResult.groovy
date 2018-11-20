@@ -28,7 +28,7 @@ public class IssueSearchResult {
 	}
 
 	def List<Map> getIssues() {
-		def elIssues = [[:]]
+		def elIssues = []
 		def elRows = elTable.findElements(By.xpath(".//tbody/tr[contains(@class, 'issuerow')]"));
 		elRows.each {
 			def issueInfo = [:]
@@ -37,28 +37,28 @@ public class IssueSearchResult {
 				def cls = it.getAttribute('class');
 				switch (cls) {
 					case 'issuetype':
-						issueInfo.put('Type', it.findElement(By.xpath(".//img")).getAttribute('alt'))
+						issueInfo.put('Type', it.findElement(By.xpath(".//img")).getAttribute('alt').trim())
 						break
 					case 'issuekey':
-						issueInfo.put('Key', it.getText())
+						issueInfo.put('Key', it.getText().trim())
 						break
 					case 'summary':
-						issueInfo.put('Summary', it.getText())
+						issueInfo.put('Summary', it.getText().trim())
 						break
 					case 'reporter':
-						issueInfo.put('Reporter', it.getText())
+						issueInfo.put('Reporter', it.getText().trim())
 						break
 					case 'priority':
-						issueInfo.put('Priority', it.findElement(By.xpath(".//img")).getAttribute('alt'))
+						issueInfo.put('Priority', it.findElement(By.xpath(".//img")).getAttribute('alt').trim())
 						break
 					case 'created':
-						issueInfo.put('Created', it.getText())
+						issueInfo.put('Created', it.getText().trim())
 						break
 					case 'updated':
-						issueInfo.put('Updated', it.getText())
+						issueInfo.put('Updated', it.getText().trim())
 						break
 					case 'duedate':
-						issueInfo.put('Due Date', it.getText())
+						issueInfo.put('Due Date', it.getText().trim())
 						break
 					case 'issue_actions':
 						break

@@ -9,6 +9,8 @@ import java.lang.String
 
 import org.openqa.selenium.WebElement
 
+import com.kms.katalon.core.testdata.TestData
+
 
 def static "com.jira.components.IssueSearchResult.getIssues"(
     	TestObject table	) {
@@ -38,6 +40,12 @@ def static "com.jira.components.JSelect.selectByText"(
     (new com.jira.components.JSelect()).selectByText(
         	el
          , 	optionText)
+}
+
+def static "com.katalon.demo.testdata.utils.TestDataParser.toMapList"(
+    	TestData tda	) {
+    (new com.katalon.demo.testdata.utils.TestDataParser()).toMapList(
+        	tda)
 }
 
 def static "com.katalon.demo.databases.MySQLConn.getData"() {
