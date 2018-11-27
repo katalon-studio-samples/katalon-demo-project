@@ -48,6 +48,14 @@ def static "com.katalon.demo.testdata.utils.TestDataParser.toMapList"(
         	tda)
 }
 
+def static "com.katalon.demo.custom.keywords.parameters.KParameters.listParams"(
+    	TestObject[] objAs	
+     , 	TestObject[] objBs	) {
+    (new com.katalon.demo.custom.keywords.parameters.KParameters()).listParams(
+        	objAs
+         , 	objBs)
+}
+
 def static "com.katalon.demo.databases.MySQLConn.getData"() {
     (new com.katalon.demo.databases.MySQLConn()).getData()
 }
