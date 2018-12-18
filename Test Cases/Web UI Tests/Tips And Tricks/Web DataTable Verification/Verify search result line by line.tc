@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Verify search result line by line</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ef5beae0-514e-4088-9119-396d1859ea89</testCaseGuid>
+   <variable>
+      <defaultValue>'KD-24272'</defaultValue>
+      <description></description>
+      <id>2546fedb-1f1a-4764-a619-3ccdfa2e5545</id>
+      <masked>false</masked>
+      <name>issue_key</name>
+   </variable>
+</TestCaseEntity>

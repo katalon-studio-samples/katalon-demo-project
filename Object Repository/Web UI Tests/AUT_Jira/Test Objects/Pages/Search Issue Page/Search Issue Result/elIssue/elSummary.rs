@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>elResultTableHeaders</name>
+   <name>elSummary</name>
    <tag></tag>
-   <elementGuidId>381d6549-826a-469e-94dd-90b1ee29e8b7</elementGuidId>
+   <elementGuidId>2be6eb3f-a418-4947-be39-c711f364985e</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//table[@id='issuetable']//tr[@class='rowHeader']//th</value>
+         <value>//tr[.//td/a[.='${issue_key}']]//td[@class='summary']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//table[@id='issuetable']//tr[@class='rowHeader']//th</value>
+      <value>//tr[.//td/a[.='${issue_key}']]//td[@class='summary']</value>
    </webElementProperties>
 </WebElementEntity>
