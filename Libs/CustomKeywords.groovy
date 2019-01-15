@@ -42,10 +42,18 @@ def static "com.jira.components.JSelect.selectByText"(
          , 	optionText)
 }
 
+def static "com.katalon.demo.xml.utils.XMLParser.xmlparser"() {
+    (new com.katalon.demo.xml.utils.XMLParser()).xmlparser()
+}
+
 def static "com.katalon.demo.testdata.utils.TestDataParser.toMapList"(
     	TestData tda	) {
     (new com.katalon.demo.testdata.utils.TestDataParser()).toMapList(
         	tda)
+}
+
+def static "com.katalon.demo.databases.MySQLConn.getData"() {
+    (new com.katalon.demo.databases.MySQLConn()).getData()
 }
 
 def static "com.katalon.demo.custom.keywords.parameters.KParameters.listParams"(
@@ -54,8 +62,4 @@ def static "com.katalon.demo.custom.keywords.parameters.KParameters.listParams"(
     (new com.katalon.demo.custom.keywords.parameters.KParameters()).listParams(
         	objAs
          , 	objBs)
-}
-
-def static "com.katalon.demo.databases.MySQLConn.getData"() {
-    (new com.katalon.demo.databases.MySQLConn()).getData()
 }

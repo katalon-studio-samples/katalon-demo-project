@@ -29,4 +29,9 @@
       <initValue>60</initValue>
       <name>element_timeout</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Basic ZGVtb0BrYXRhbG9uLmNvbTpWQm5jZXRPU083MEU0TlZMWVFuaDlCMkQ='</initValue>
+      <name>authorization</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

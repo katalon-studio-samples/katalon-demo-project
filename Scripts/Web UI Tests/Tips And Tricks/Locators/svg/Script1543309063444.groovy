@@ -15,4 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser('https://www.w3schools.com/html/tryit.asp?filename=tryhtml_svg_circle')
 WebUI.click(findTestObject('Web UI Tests/Tips And Tricks/svg/el_svg'))
+println WebUI.getElementHeight(findTestObject('Web UI Tests/Tips And Tricks/svg/el_svg'))
+
+
 

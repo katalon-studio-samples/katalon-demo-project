@@ -16,8 +16,8 @@
   &lt;SOAP-ENV:Header/>
   &lt;SOAP-ENV:Body>
     &lt;tns:Multiply>
-      &lt;tns:intA>?&lt;/tns:intA>
-      &lt;tns:intB>?&lt;/tns:intB>
+      &lt;tns:intA>1&lt;/tns:intA>
+      &lt;tns:intB>2&lt;/tns:intB>
     &lt;/tns:Multiply>
   &lt;/SOAP-ENV:Body>
 &lt;/SOAP-ENV:Envelope>

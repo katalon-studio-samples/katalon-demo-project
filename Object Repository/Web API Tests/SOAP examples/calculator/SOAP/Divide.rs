@@ -16,8 +16,8 @@
   &lt;SOAP-ENV:Header/>
   &lt;SOAP-ENV:Body>
     &lt;tns:Divide>
-      &lt;tns:intA>?&lt;/tns:intA>
-      &lt;tns:intB>?&lt;/tns:intB>
+      &lt;tns:intA>10&lt;/tns:intA>
+      &lt;tns:intB>3&lt;/tns:intB>
     &lt;/tns:Divide>
   &lt;/SOAP-ENV:Body>
 &lt;/SOAP-ENV:Envelope>

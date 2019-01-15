@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Verify the created ticket info by API</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>801a434b-ed31-4fa5-a367-208ac553d202</testCaseGuid>
-</TestCaseEntity>

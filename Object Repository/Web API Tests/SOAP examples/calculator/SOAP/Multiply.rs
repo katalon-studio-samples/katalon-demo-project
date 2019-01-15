@@ -16,8 +16,8 @@
   &lt;SOAP-ENV:Header/>
   &lt;SOAP-ENV:Body>
     &lt;tns:Multiply>
-      &lt;tns:intA>?&lt;/tns:intA>
-      &lt;tns:intB>?&lt;/tns:intB>
+      &lt;tns:intA>1&lt;/tns:intA>
+      &lt;tns:intB>10&lt;/tns:intB>
     &lt;/tns:Multiply>
   &lt;/SOAP-ENV:Body>
 &lt;/SOAP-ENV:Envelope>
@@ -25,5 +25,19 @@
    <soapHeader></soapHeader>
    <soapRequestMethod>SOAP</soapRequestMethod>
    <soapServiceFunction>Multiply</soapServiceFunction>
+   <verificationScript>import static org.assertj.core.api.Assertions.*
+
+import com.kms.katalon.core.testobject.RequestObject
+import com.kms.katalon.core.testobject.ResponseObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webservice.verification.WSResponseManager
+
+import groovy.json.JsonSlurper
+import internal.GlobalVariable as GlobalVariable
+
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
+
+ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
+</verificationScript>
    <wsdlAddress>http://www.dneonline.com/calculator.asmx?WSDL</wsdlAddress>
 </WebServiceRequestEntity>

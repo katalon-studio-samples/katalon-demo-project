@@ -50,6 +50,11 @@ Profile AUT_Jira : A valid account used during the test</p>
     /**
      * <p></p>
      */
+    public static Object authorization
+     
+    /**
+     * <p></p>
+     */
     public static Object now_e_movies_url
      
     /**
@@ -66,7 +71,7 @@ Profile AUT_Jira : A valid account used during the test</p>
     static {
         def allVariables = [:]        
         allVariables.put('default', ['URL' : 'https://katalon.atlassian.net', 'password' : 'sPiHQ&YEa6ST`de+', 'encrypted_password' : 'KLAk0b2rAgvA1EV7zgpKiS/uV+5nc48Y', 'username' : 'demo@katalon.com', 'element_timeout' : 60, 'ticket_sample' : 'Ticket created at 1528442112968'])
-        allVariables.put('AUT_Jira', allVariables['default'] + ['URL' : 'https://katalon.atlassian.net', 'password' : 'sPiHQ&YEa6ST`de+', 'encrypted_password' : 'KLAk0b2rAgvA1EV7zgpKiS/uV+5nc48Y', 'username' : 'demo@katalon.com', 'element_timeout' : 60])
+        allVariables.put('AUT_Jira', allVariables['default'] + ['URL' : 'https://katalon.atlassian.net', 'password' : 'sPiHQ&YEa6ST`de+', 'encrypted_password' : 'KLAk0b2rAgvA1EV7zgpKiS/uV+5nc48Y', 'username' : 'demo@katalon.com', 'element_timeout' : 60, 'authorization' : 'Basic ZGVtb0BrYXRhbG9uLmNvbTpWQm5jZXRPU083MEU0TlZMWVFuaDlCMkQ='])
         allVariables.put('android', allVariables['default'] + ['now_e_movies_url' : '/Users/trongbui/katalon/sources/katalon-studio-samples/katalon-demo-project/Apps/android/Now E Movies Dramas Sports_v1.0.7_apkpure.com.apk'])
         allVariables.put('desktop', allVariables['default'] + [:])
         allVariables.put('dev profile', allVariables['default'] + ['username' : 'bella'])
@@ -74,17 +79,25 @@ Profile AUT_Jira : A valid account used during the test</p>
         allVariables.put('qa profile', allVariables['default'] + ['username' : 'tom'])
         
         String profileName = RunConfiguration.getExecutionProfile()
-        
         def selectedVariables = allVariables[profileName]
-        URL = selectedVariables['URL']
-        password = selectedVariables['password']
-        encrypted_password = selectedVariables['encrypted_password']
-        username = selectedVariables['username']
-        element_timeout = selectedVariables['element_timeout']
-        ticket_sample = selectedVariables['ticket_sample']
-        now_e_movies_url = selectedVariables['now_e_movies_url']
-        app_url = selectedVariables['app_url']
-        time_zone = selectedVariables['time_zone']
+		
+		for(object in selectedVariables){
+			String overridingGlobalVariable = RunConfiguration.getOverridingGlobalVariable(object.key)
+			if(overridingGlobalVariable != null){
+				selectedVariables.put(object.key, overridingGlobalVariable)
+			}
+		}
+
+        URL = selectedVariables["URL"]
+        password = selectedVariables["password"]
+        encrypted_password = selectedVariables["encrypted_password"]
+        username = selectedVariables["username"]
+        element_timeout = selectedVariables["element_timeout"]
+        ticket_sample = selectedVariables["ticket_sample"]
+        authorization = selectedVariables["authorization"]
+        now_e_movies_url = selectedVariables["now_e_movies_url"]
+        app_url = selectedVariables["app_url"]
+        time_zone = selectedVariables["time_zone"]
         
     }
 }
